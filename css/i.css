@@ -154,13 +154,13 @@ button, input, select, textarea { font-family: inherit; font-size: 100%; }
 
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary { display: block; }
 
-body { font-family: 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.5rem; font-weight: 400; }
+body { font-family: 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.5rem; font-weight: 200; letter-spacing: .02rem; }
 
 h1, .h1, .f1 { font-size: 2rem; line-height: 2.5rem; }
 
 h2, .h2, .f2 { font-size: 1.5rem; line-height: 2rem; }
 
-h3, .h3, .f3 { font-size: 1.25rem; line-height: 1.5rem; }
+h3, .h3, p, .f3 { font-size: 1.25rem; line-height: 1.5rem; }
 
 p, .p, .f4, h4, h5, h6, dl, ol, ul { font-size: 1.125rem; line-height: 1.5rem; }
 
@@ -168,7 +168,7 @@ small, .small, .f5 { font-size: .875rem; line-height: 1.5rem; opacity: 0.8; }
 
 @media screen and (min-width: 48em) { .h1 { font-size: 4rem; line-height: 5rem; }
   .h2 { font-size: 2rem; line-height: 2.5rem; }
-  .h3 { font-size: 1.5rem; line-height: 2rem; }
+  .h3, p { font-size: 1.5rem; line-height: 2rem; }
   .p { font-size: 1.25rem; line-height: 2rem; }
   .small { font-size: .85rem; } }
 @media screen and (min-width: 64em) { .h1 { font-size: 6rem; line-height: 8rem; }
@@ -273,7 +273,7 @@ strong, .bold { font-weight: bold; }
 
 .px1 { padding-right: 1rem; padding-left: 1rem; }
 
-.py1 { padding-top: 1rem; padding-bottom: 1rem; }
+.py1, p { padding-top: 1rem; padding-bottom: 1rem; }
 
 .p2 { padding: 2rem; }
 
@@ -455,4 +455,10 @@ html, body { height: 100%; }
 
 .va-middle { vertical-align: middle; }
 
-header { min-height: 100%; background: url(../img/lumber.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover; }
+header { min-height: 100%; }
+
+.wrap { margin: 0 auto; }
+
+.container { max-width: 48rem; }
+
+p { line-height: 2.5rem; }

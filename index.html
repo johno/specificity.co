@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>
-      Lumber.js
+      Specificity.co
     </title>
     <meta name="author" content="John Otander">
     <meta name="description" content="">
@@ -17,106 +17,76 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-38554429-2', 'lumberjs.com');
+      ga('create', '', 'specificity.co');
       ga('send', 'pageview');
     </script>
   </head>
   <body>
-    <header class="relative table center white text-shadow">
-      <div class="heading-wrapper table-cell va-middle center">
-        <h1 class="h1">Lumber.js</h1>
-        <p class="h3">
-          A wrapper for d3.js. <br>
-          Currently under development.
-        </p>
-      </div>
-    </header>
-
-    <div class="p4 p-responsive">
-      <h2 class="h2">Simple, beautiful graphs.</h2>
-      <p class="h3 mb3">
-        Lumber.js is a wrapper for the d3.js library. It comes with numerous graphs out of the box,
-        and only requires you to write a touch of javascript.
+    <div class="wrap container py4">
+      <h1 class="h1">CSS Specificity</h1>
+      <p>
+        When CSS doesn't do what you think it should, one of your first culprits is specificity.
+        However, the notion of specificity shouldn't be a source of frustration. It provides a set of
+        rules that you can count on when constructing your style sheets. There needs to be a system to
+        determine which style property to use when there are conflicts, and specificity values do just
+        that.
       </p>
-      <pre class="bg-very-light-gray dark-gray mb3 px3 py1">
-        <code>
-&lt;!-- Set the graph information in the data attributes of an svg tag. --&gt;
-&lt;svg id="lumber"
-     data-lumber-type="bar"
-     data-lumber-y-axis-label="Frequency"
-     data-lumber-x-axis-label="Letter"
-     data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M"&gt;
-&lt;/svg&gt;
-&lt;script&gt;
-  // When the DOM is loaded, call lumber's graphing function.
-  document.addEventListener("DOMContentLoaded", function() {
-    lumber.graph("#lumber");
-  });
-&lt;/script&gt;
-        </code>
-      </pre>
-      <div class="center p4 p-responsive">
-        <h2 class="h2">Lumber.js takes care of the rest.</h2>
-        <svg class="lumber mt3" id="lumber" data-lumber-type="bar" data-lumber-y-axis-label="Frequency" data-lumber-x-axis-label="Letter" data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M" data-lumber-width="400" data-lumber-responsive="true"></svg>
-      </div>
+      <h2 class="dark-gray">
+        How is specificity determined?
+      </h2>
+      <p>
+        Every selector has a specificity value. Whichever value is larger dictates which styles are applied.
+        When the specificity value is the same between multiple rules, the rule that is defined last is
+        the rule that is applied. When it comes to specificity, as a whole, the last rule defined determines
+        the styling to be applied whenever there is a conflict.
+      </p>
+      <p>
+        As a general rule, it's best to spend time thinking about how to structure your styling in a more
+        modular fashion. Leveraging 
+        <a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">OOCSS principles</a>
+        or a <a href="http://sass-lang.com/">preprocessor</a> would be a great place to start. This allows
+        you to approach styling in a consistent, predicitable way. You should apply styling to an HTML
+        document so specificity isn't even a consideration.
+      </p>
+      <p class="italic dark-gray">
+        Web browsers use a specificity like a hierarchy to determine which style properties to apply.
+      </p>
+      <p>
+        In order to make sense of what CSS selectors to prioritize, selectors are placed in four categories:
 
-      <div class="p4 p-responsive">
-        <h3 class="h2">Create a line chart.</h3>
-        <pre class="bg-very-light-gray dark-gray mb3 px3 py1">
-          <code>
-&lt;!-- Set the graph information in the data attributes of an svg tag. --&gt;
-&lt;svg id="lumber"
-     data-lumber-type="line"
-     data-lumber-x-axis-label="Price ($)"
-     data-lumber-values="1-May-12:582.13,30-Apr-12:583.98"&gt;
-&lt;/svg&gt;
-&lt;script&gt;
-  // When the DOM is loaded, call lumber's graphing function.
-  document.addEventListener("DOMContentLoaded", function() {
-    lumber.graph("#lumber");
-  });
-&lt;/script&gt;
-          </code>
-        </pre>
-
-        <svg id="line" class="lumber" data-lumber-type="line" data-lumber-x-axis-label="Price ($)" data-lumber-values="1-May-12:582.13,30-Apr-12:583.98,22-Apr-12:555.555,20-Apr-12:500.11"></svg>
-      </div>
-
-      <div class="p4 p-responsive">
-        <h3 class="h2">Create a pie chart.</h3>
-        <pre class="bg-very-light-gray dark-gray mb3 px3 py1">
-          <code>
-&lt;!-- Set the graph information in the data attributes of an svg tag. --&gt;
-&lt;svg id="pie"
-     data-lumber-type="pie"
-     data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M"&gt;
-&lt;/svg&gt;
-&lt;script&gt;
-  // When the DOM is loaded, call lumber's graphing function.
-  document.addEventListener("DOMContentLoaded", function() {
-    lumber.graph("#pie");
-  });
-&lt;/script&gt;
-          </code>
-        </pre>
-
-        <svg id="pie" class="lumber" data-lumber-type="pie" data-lumber-x-axis-label="Price ($)" data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M"></svg>
-        <div class="clearfix"></div>
-      </div>
+        <ol class="h3 px1 dark-gray">
+          <li>Inline styles</li>
+          <li>IDs</li>
+          <li>Classes and Attributes</li>
+          <li>Elements</li>
+        </ol>
+      </p>
+      <p class="h2">What do these categories even mean?</p>
+      <h3 class="dark-gray">
+        Inline styling
+      </h2>
+      <p>Just don't use this. Ever... Seriously. The same goes for <code>!important</code>.</p>
+      <h3 class="dark-gray">
+        IDs
+      </h3>
+      <p>
+        ID selectors have a <em>very</em> high specificity value. This becomes especially problematic when you
+        consider the fact that only one ID can be applied to an HTML element. So, similarly to inline styling, 
+        refrain from leveraging IDs for styling except under the most dire circumstances. IDs are best used
+        for javascript DOM queries, anyway.
+      </p>
+      <h3 class="dark-gray">
+        Classes, attributes, and pseudo-classes
+      </h3>
+      <p>
+        Classes, attributes, and pseudo-classes are the bread and butter of properly implemented OOCSS that 
+        makes specificity a mere hiccup during development. A class selector will <em>always</em> have a 
+        higher specificity value than an element selector.
+      </p>
+      <p>
+        Classes are perfect for implementing styling that isn't the default. For example, if you want to make
+        a link look like a button or give a paragraph a different line-height.
+      </p>
     </div>
-
-    <div class="p4 p-responsive bg-very-light-gray">
-      <p class="mid-gray small mt1">Crafted with &lt;3 by <a href="https://twitter.com/4lpine">John Otander</a>.</p>
-    </div>
-
-    <script src="js/d3.js"></script>
-    <script src="js/lumber.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        lumber.graph("#lumber");
-        lumber.graph("#line");
-        lumber.graph("#pie");
-      });
-    </script>
   </body>
 </html>

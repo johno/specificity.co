@@ -22,6 +22,18 @@ body {
 
 header {
   min-height: 100%;
-  background: url(../img/lumber.jpg) no-repeat center;
-  background-size: cover;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 48rem;
+}
+
+p {
+  @extend .py1;
+  @extend .h3;
+  line-height: 2.5rem;
 }
