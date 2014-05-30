@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>
+      Lumber.js
+    </title>
+    <meta name="author" content="John Otander">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/i.css">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-38554429-2', 'lumberjs.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <header class="relative table center white text-shadow">
+      <div class="heading-wrapper table-cell va-middle center">
+        <h1 class="h1">Lumber.js</h1>
+        <p class="h3">
+          A wrapper for d3.js. <br>
+          Currently under development.
+        </p>
+      </div>
+    </header>
+
+    <div class="p4 p-responsive">
+      <h2 class="h2">Simple, beautiful graphs.</h2>
+      <p class="h3 mb3">
+        Lumber.js is a wrapper for the d3.js library. It comes with numerous graphs out of the box,
+        and only requires you to write a touch of javascript.
+      </p>
+      <pre class="bg-very-light-gray dark-gray mb3 px3 py1">
+        <code>
+&lt;!-- Set the graph information in the data attributes of an svg tag. --&gt;
+&lt;svg id="lumber"
+     data-lumber-type="bar"
+     data-lumber-y-axis-label="Frequency"
+     data-lumber-x-axis-label="Letter"
+     data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M"&gt;
+&lt;/svg&gt;
+&lt;script&gt;
+  // When the DOM is loaded, call lumber's graphing function.
+  document.addEventListener("DOMContentLoaded", function() {
+    lumber.graph("#lumber");
+  });
+&lt;/script&gt;
+        </code>
+      </pre>
+      <div class="center p4 p-responsive">
+        <h2 class="h2">Lumber.js takes care of the rest.</h2>
+        <svg class="lumber mt3" id="lumber" data-lumber-type="bar" data-lumber-y-axis-label="Frequency" data-lumber-x-axis-label="Letter" data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M" data-lumber-width="400" data-lumber-responsive="true"></svg>
+      </div>
+
+      <div class="p4 p-responsive">
+        <h3 class="h2">Create a line chart.</h3>
+        <pre class="bg-very-light-gray dark-gray mb3 px3 py1">
+          <code>
+&lt;!-- Set the graph information in the data attributes of an svg tag. --&gt;
+&lt;svg id="lumber"
+     data-lumber-type="line"
+     data-lumber-x-axis-label="Price ($)"
+     data-lumber-values="1-May-12:582.13,30-Apr-12:583.98"&gt;
+&lt;/svg&gt;
+&lt;script&gt;
+  // When the DOM is loaded, call lumber's graphing function.
+  document.addEventListener("DOMContentLoaded", function() {
+    lumber.graph("#lumber");
+  });
+&lt;/script&gt;
+          </code>
+        </pre>
+
+        <svg id="line" class="lumber" data-lumber-type="line" data-lumber-x-axis-label="Price ($)" data-lumber-values="1-May-12:582.13,30-Apr-12:583.98,22-Apr-12:555.555,20-Apr-12:500.11"></svg>
+      </div>
+
+      <div class="p4 p-responsive">
+        <h3 class="h2">Create a pie chart.</h3>
+        <pre class="bg-very-light-gray dark-gray mb3 px3 py1">
+          <code>
+&lt;!-- Set the graph information in the data attributes of an svg tag. --&gt;
+&lt;svg id="pie"
+     data-lumber-type="pie"
+     data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M"&gt;
+&lt;/svg&gt;
+&lt;script&gt;
+  // When the DOM is loaded, call lumber's graphing function.
+  document.addEventListener("DOMContentLoaded", function() {
+    lumber.graph("#pie");
+  });
+&lt;/script&gt;
+          </code>
+        </pre>
+
+        <svg id="pie" class="lumber" data-lumber-type="pie" data-lumber-x-axis-label="Price ($)" data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M"></svg>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+    <div class="p4 p-responsive bg-very-light-gray">
+      <p class="mid-gray small mt1">Crafted with &lt;3 by <a href="https://twitter.com/4lpine">John Otander</a>.</p>
+    </div>
+
+    <script src="js/d3.js"></script>
+    <script src="js/lumber.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        lumber.graph("#lumber");
+        lumber.graph("#line");
+        lumber.graph("#pie");
+      });
+    </script>
+  </body>
+</html>

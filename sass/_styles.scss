@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Site styles
+   ========================================================================== */
+
+html,
+body {
+  height: 100%;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.va-middle {
+  vertical-align: middle;
+}
+
+header {
+  min-height: 100%;
+  background: url(../img/lumber.jpg) no-repeat center;
+  background-size: cover;
+}
