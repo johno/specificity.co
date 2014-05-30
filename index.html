@@ -10,16 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/i.css">
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', '', 'specificity.co');
-      ga('send', 'pageview');
-    </script>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="wrap container py4 p-responsive">
@@ -42,7 +33,7 @@
       </p>
       <p>
         As a general rule, it's best to spend time thinking about how to structure your styling in a more
-        modular fashion. Leveraging 
+        modular fashion. Leveraging
         <a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">OOCSS principles</a>
         or a <a href="http://sass-lang.com/">preprocessor</a> would be a great place to start. This allows
         you to approach styling in a consistent, predicitable way. You should apply styling to an HTML
@@ -61,7 +52,7 @@
           <li>Elements</li>
         </ol>
       </p>
-      <p class="h2 mb3 mid-gray">What do these categories even mean?</p>
+      <p class="mb3 h2 mid-gray italic">What do these categories even mean?</p>
       <h3>
         Inline styling
       </h2>
@@ -71,7 +62,7 @@
       </h3>
       <p>
         ID selectors have a <em>very</em> high specificity value. This becomes especially problematic when you
-        consider the fact that only one ID can be applied to an HTML element. So, similarly to inline styling, 
+        consider the fact that only one ID can be applied to an HTML element. So, similarly to inline styling,
         refrain from leveraging IDs for styling except under the most dire circumstances. IDs are best used
         for javascript DOM queries, anyway.
       </p>
@@ -79,8 +70,8 @@
         Classes, attributes, and pseudo-classes
       </h3>
       <p>
-        Classes, attributes, and pseudo-classes are the bread and butter of properly implemented OOCSS that 
-        makes specificity a mere hiccup during development. A class selector will <em>always</em> have a 
+        Classes, attributes, and pseudo-classes are the bread and butter of properly implemented OOCSS that
+        makes specificity a mere hiccup during development. A class selector will <em>always</em> have a
         higher specificity value than an element selector.
       </p>
       <p>
@@ -94,5 +85,16 @@
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN Specificity</a></li>
       </ul>
     </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-51506155-1', 'specificity.co');
+      ga('send', 'pageview');
+
+    </script>
   </body>
 </html>
