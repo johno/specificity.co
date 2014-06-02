@@ -40,7 +40,8 @@
         document so specificity isn't even a consideration.
       </p>
       <p class="italic mid-gray">
-        Web browsers use a specificity like a hierarchy to determine which style properties to apply.
+        Web browsers use specificity like a hierarchy to determine which style properties to apply. This is
+        how the styling of a document "cascades".
       </p>
       <p>
         In order to make sense of what CSS selectors to prioritize, selectors are placed in four categories:
@@ -78,11 +79,23 @@
         Classes are perfect for implementing styling that isn't the default. For example, if you want to make
         a link look like a button or give a paragraph a different line-height.
       </p>
+      <h3>
+        Elements and pseudo-elements
+      </h3>
+      <p>
+        This category is the lowest in the specificity value hierarchy. These selectors are typically used for
+        a webpage's baseline styling.
+      </p>
+      <!--<h2>There are always exceptions...</h2>
+      <p>
+        Embedded styles within a document are considered closer to an element.
+      </p>-->
       <h3 class="h2 py3">Further Reading on Specificity</h3>
       <ul>
         <li><a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">CSS Specificity Things You Should Know</a></li>
         <li><a href="http://css-tricks.com/specifics-on-css-specificity/">Specifics on CSS Specificity</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN Specificity</a></li>
+        <li><a href="http://www.w3.org/TR/selectors/#specificity">W3C on Specificity</a></li>
       </ul>
     </div>
 
