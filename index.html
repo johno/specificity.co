@@ -26,7 +26,7 @@
         How is specificity determined?
       </h2>
       <p>
-        Every selector has a specificity value. Whichever value is larger dictates which styles are applied.
+        Every selector has a specificity value. Whichever value is largest dictates which styles are applied.
         When the specificity value is the same between multiple rules, the rule that is defined last is
         the rule that is applied. When it comes to specificity, as a whole, the last rule defined determines
         the styling to be applied whenever there is a conflict.
@@ -84,11 +84,18 @@
       </h3>
       <p>
         This category is the lowest in the specificity value hierarchy. These selectors are typically used for
-        a webpage's baseline styling.
+        a webpage's baseline styling. This is especially useful for any style elements that will likely be applied
+        to the majority of elements.
+      </p>
+      <p>
+        Applying baseline styles for `background-color`, `font-family`, `font-size`, and `color`, among others, is
+        useful in establishing a general feel for your webpage. This is desirable because it ensures a large amount
+        of site styling without stacking on unnecessary specificity and complex cascading styles.
       </p>
       <h3 class="h2">There are <span class="italic">always</span> exceptions...</h2>
       <p>
-        Embedded styles within a document are considered closer to an element. So they will override Also, the universal selector, <code>*</code> has a specificity of 0.
+        Embedded styles within a document are considered closer to an element. So they will override linked selectors 
+        with equal specificity value. Also, the universal selector, <code>*</code> has a specificity of 0.
       </p>
       <h3 class="h2 py3">Further Reading on Specificity</h3>
       <ul>
