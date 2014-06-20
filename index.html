@@ -55,11 +55,11 @@
       </p>
       <p class="mb3 h2 mid-gray italic">What do these categories even mean?</p>
       <h3>
-        Inline styling
+        1. Inline styling
       </h3>
       <p>Just don't use this. Ever... Seriously. The same goes for <code>!important</code>.</p>
       <h3>
-        IDs
+        2. IDs
       </h3>
       <p>
         ID selectors have a <em>very</em> high specificity value. This becomes especially problematic when you
@@ -68,7 +68,7 @@
         for javascript DOM queries, anyway.
       </p>
       <h3>
-        Classes, attributes, and pseudo-classes
+        3. Classes, attributes, and pseudo-classes
       </h3>
       <p>
         Classes, attributes, and pseudo-classes are the bread and butter of properly implemented OOCSS that
@@ -76,11 +76,20 @@
         higher specificity value than an element selector.
       </p>
       <p>
-        Classes are perfect for implementing styling that isn't the default. For example, if you want to make
+        <strong>Classes</strong> are perfect for implementing styling that isn't the default. For example, if you want to make
         a link look like a button or give a paragraph a different line-height.
       </p>
+      <p>
+        <strong>Attributes</strong> are also quite useful for selecting, for example <code>input[type="submit"]</code> will select
+        the submit button, but leave all the other input types alone. This is handy for adding submit button
+        styles.
+      </p>
+      <p>
+        <strong>Pseudo-classes</strong> include selectors like <code>:hover</code>, <code>:first-child</code>, and <code>:active</code>.
+        They can be used to apply more specific styling to a given state or property element.
+      </p>
       <h3>
-        Elements and pseudo-elements
+        4. Elements and pseudo-elements
       </h3>
       <p>
         This category is the lowest in the specificity value hierarchy. These selectors are typically used for
@@ -93,10 +102,37 @@
         desirable because it ensures a large amount of site styling without stacking on unnecessary specificity
         and complex cascading styles.
       </p>
+      <h3 class="h2">Calculating Specificity</h3>
+      <p>
+        You can calculate the specificty by giving point values to different types of selectors.
+      </p>
+
+      <ul>
+        <li>Inline Styles get 1000 points.</li>
+        <li>IDs get 100 points</li>
+        <li>Classes, attributes, and pseudo-classes get 10 points.</li>
+        <li>Elements and psuedo-elements get 1 point each.</li>
+      </ul>
+
+      <p>
+        For a visual explanation, see <a href="http://cssspecificity.com/">cssspecificity.com</a>.
+      </p>
       <h3 class="h2">There are <span class="italic">always</span> exceptions...</h2>
       <p>
         Embedded styles within a document are considered closer to an element. So they will override linked selectors
         with equal specificity value. Also, the universal selector, <code>*</code>, has a specificity of 0.
+      </p>
+      <p>
+        Additionally, more specific selection only override the properties/rules that are defined. It doesn't negate other properties. For example:
+      </p>
+      <pre>
+<code>.btn { background-color: blue; color: white; }
+.btn { background-color: green; }</code>
+      </pre>
+      <p>
+        In the above example, the second <code>.btn</code> class that makes the background green, overrides the previous definition. However,
+        the font color still remains white because that style wasn't overriden. This is very valuable for applying multiple classes
+        to define disjointed rules of styling (like <a href="http://appendto.com/2014/04/oocss/">OOCSS</a>).
       </p>
       <h3 class="h2 py3">Further Reading on Specificity</h3>
       <ul>

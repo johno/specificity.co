@@ -156,6 +156,8 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 
 body { font-family: 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.5rem; font-weight: 200; letter-spacing: .02rem; }
 
+pre { padding: 20px 20px 0 20px; background-color: #fafafa; border: thin solid #f3f3f3; }
+
 h1, .h1, .f1 { font-size: 2rem; line-height: 2.5rem; }
 
 h2, .h2, .f2 { font-size: 1.5rem; line-height: 2rem; }
