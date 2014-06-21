@@ -1,5 +1,5 @@
 # Specificity.co
 
-_This is currently under development._
+[www.specificity.co](http://specificity.co)
 
 A dive into specificity.
