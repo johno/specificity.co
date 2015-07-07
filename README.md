@@ -1,5 +1,5 @@
 # Specificity.co
 
-[www.specificity.co](http://specificity.co)
+<http://johnotander.com/specificity.co/>
 
 A dive into specificity.
